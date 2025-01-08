@@ -1,0 +1,31 @@
+@page
+@using ManifestationApp.Models
+@model ManifestationApp.Pages.Goals.IndexModel
+@{
+    ViewData["Title"] = "My Goal";
+}
+
+<h1>My Manifestation Goal</h1>
+
+<form method="post">
+    <div>
+        <label>Goal Description:</label>
+        <input type="text" name="GoalDescription" value="@Model.GoalDescription" />
+    </div>
+    <div>
+        <label>Frequency:</label>
+        <select name="ManifestationFrequency">
+            <option value="Daily" selected="@((Model.Frequency == Frequency.Daily) ? "selected" : "")">Daily</option>
+            <option value="Weekly" selected="@((Model.Frequency == Frequency.Weekly) ? "selected" : "")">Weekly</option>
+        </select>
+    </div>
+    <button type="submit">Save</button>
+</form>
+
+<hr />
+
+@if (!string.IsNullOrWhiteSpace(Model.Affirmation))
+{
+    <h2>Your New Affirmation</h2>
+    <p>@Model.Affirmation</p>
+}

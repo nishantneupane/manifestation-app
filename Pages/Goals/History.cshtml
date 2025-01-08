@@ -1,0 +1,25 @@
+@page
+@model ManifestationApp.Pages.Goals.HistoryModel
+@{
+    ViewData["Title"] = "My Manifestation History";
+}
+
+<h1>My Manifestation History</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Message</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var record in Model.Records)
+        {
+            <tr>
+                <td>@record.SentOn.ToLocalTime().ToString("g")</td>
+                <td>@record.Message</td>
+            </tr>
+        }
+    </tbody>
+</table>
