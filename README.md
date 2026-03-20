@@ -33,8 +33,3 @@ Feel free to fork the repo and submit pull requests.
 
 ## 📄 License
 This project is licensed under the MIT License.<<<<<<< HEAD
-# Manifestation-App
-=======
-# Manifestation-App
-# Manifestation-App
->>>>>>> ef5a486 (Initial commit)
